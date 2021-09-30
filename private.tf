@@ -51,6 +51,7 @@ resource "aws_security_group" "db" {
   }
 }
 
+/*
 resource "aws_instance" "db-1" {
   ami                    = "${lookup(var.amis, var.aws_region)}"
   availability_zone      = "us-east-1a"
@@ -63,4 +64,5 @@ resource "aws_instance" "db-1" {
   tags = {
     Name = "DB Server 1"
   }
+ */
 }
