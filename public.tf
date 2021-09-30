@@ -37,7 +37,9 @@ resource "aws_security_group" "web" {
     cidr_blocks = ["${var.private_subnet_cidr}"]
   }
 
-  vpc_id = "${aws_vpc.default.id}"
+  #vpc_id = "${aws_vpc.default.id}"
+  vpc_id = "${aws_vpc.id}"
+  
 
   tags = {
     Name = "WebServerSG"
