@@ -46,6 +46,7 @@ resource "aws_security_group" "web" {
   }
 }
 
+/*
 resource "aws_instance" "web-1" {
   ami                         = "${lookup(var.amis, var.aws_region)}"
   availability_zone           = "us-east-1a"
@@ -60,6 +61,8 @@ resource "aws_instance" "web-1" {
     Name = "Web Server 1"
   }
 }
+*/
+  
 
 resource "aws_eip" "web-1" {
   instance = "${aws_instance.web-1.id}"
