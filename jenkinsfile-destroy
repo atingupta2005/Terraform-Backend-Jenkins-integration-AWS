@@ -1,6 +1,12 @@
 pipeline{
   agent any
   stages{
+    stage('terraform init'){
+      steps{
+        sh 'terraform init -reconfigure'
+      }
+  
+  
     stage('terraform destroy'){
       steps{
         sh returnStatus: true, script: 'terraform destroy -auto-approve'
